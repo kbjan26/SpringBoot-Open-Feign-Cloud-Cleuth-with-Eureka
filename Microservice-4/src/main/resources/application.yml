@@ -1,0 +1,20 @@
+logging:
+  file: C:/Users/kbjan/SpringBootLogs/application.txt
+  level.org.springframework.cloud: DEBUG
+spring:
+  application:
+    name: Microservice-4
+  sleuth:
+    enabled: true
+    sampler:
+      percentage: 1
+  zipkin:
+    baseUrl: http://localhost:9411/
+server:
+  port: 8083
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    instance:
+    preferIpAddress: true
